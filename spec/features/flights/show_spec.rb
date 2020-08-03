@@ -37,5 +37,17 @@ RSpec.describe 'As a visitor', type: :feature do
       expect(page).to have_content(@passenger_1.name)
       expect(page).to have_content(@passenger_2.name)
     end
+
+    it "I see the number of minors on the flight (minors are any passengers that are under 18)" do
+      visit "/flights/#{@flight.id}"
+      save_and_open_page
+      expect(page).to have_content("Number of Minors on this Flight: 1")
+    end
+
+    it "And I see the number of adults on the flight (adults are any passengers that are 18 or older)" do
+      visit "/flights/#{@flight.id}"
+
+      expect(page).to have_content("Number of Adults on this Flight: 1")
+    end
   end
 end
