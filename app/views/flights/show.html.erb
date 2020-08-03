@@ -1,0 +1,11 @@
+<h1>Name: <%=@flight.number%></h1>
+
+<section id='flight-<%= @flight.id%>'>
+  <h3>  <%= @airline.name %>  </h3>
+  <p>Flight Number: <%= @flight.number %></p>
+  <p>Date: <%= @flight.date %></p>
+  <p>time: <%= @flight.time %></p>
+  <p>Depature City: <%= @flight.departure_city %></p>
+  <p>Arrival City: <%= @flight.arrival_city %></p>
+  <p>Passengers: <%= @flight.all_passenger_names%>  </p>
+</section>
