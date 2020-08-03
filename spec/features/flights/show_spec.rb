@@ -1,8 +1,10 @@
+require "rails_helper"
+
 RSpec.describe 'As a visitor', type: :feature do
   before(:each) do
     @airline = Airline.create(name: "Southwest")
 
-    @flight = Flight.create(number: 1260, date: "08/13/2020", time: "12:30 AM", departure_city: "Denver", arrival_city: "Vernal", airline_id: @airline.id)
+    @flight =  @airline.flights.create(number: 1260, date: "08/13/2020", time: "12:30 AM", departure_city: "Denver", arrival_city: "Vernal", airline_id: @airline.id)
 
     @passenger_1 = Passenger.create(name: "Bob", age: 14)
     @passenger_2 = Passenger.create(name: "Eric", age: 44)
