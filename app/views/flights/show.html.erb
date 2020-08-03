@@ -9,3 +9,6 @@
   <p>Arrival City: <%= @flight.arrival_city %></p>
   <p>Passengers: <%= @flight.all_passenger_names%>  </p>
 </section>
+
+Number of Minors on this Flight: <%= @flight.passengers.minors_on_flight%> <br>
+Number of Adults on this Flight: <%= @flight.passengers.adults_on_flight%>
