@@ -1,7 +1,7 @@
 <h1>Name: <%=@flight.number%></h1>
 
 <section id='flight-<%= @flight.id%>'>
-  <h3>  <%= @airline.name %>  </h3>
+  <h3>  <%= @flight.airline.name %>  </h3>
   <p>Flight Number: <%= @flight.number %></p>
   <p>Date: <%= @flight.date %></p>
   <p>time: <%= @flight.time %></p>
